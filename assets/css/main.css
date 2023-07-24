@@ -1,0 +1,105 @@
+/* Reset some default styles to ensure consistency across browsers */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #141414;
+    background-color: #f6f7f8;
+    max-width: 950px; /* Ancho máximo de todo el contenido */
+    margin: 0 auto; /* Centrar el contenido en la página */
+}
+
+/* Header Styles */
+header {
+    background-color: #141414;
+    color: #f6f7f8;
+    padding: 10px;
+    display: flex; /* Mostrar elementos en línea en el header */
+    align-items: center; /* Centrar verticalmente los elementos del header */
+    position: fixed; /* Hacer que el header esté fijo en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-left h1 {
+    font-size: 24px;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex; /* Mostrar los elementos del menú en línea */
+}
+
+.header-right li {
+    margin-right: 20px;
+}
+
+.header-right li:last-child {
+    margin-right: 0;
+}
+
+.header-right a {
+    color: #f6f7f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #ffcd14;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    margin-top: 80px; /* Ajuste para dejar espacio debajo del header fijo */
+}
+
+section h2 {
+    color: #ffcd14;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+}
+
+/* Portfolio Styles */
+.work-item {
+    margin-bottom: 30px;
+}
+
+.work-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Image Slider Styles */
+.image-slider {
+    background-color: #141414;
+    padding: 20px;
+    color: #f6f7f8;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #141414;
+    color: #ededed;
+    font-size: 11pt;
+}
+
+footer a {
+    color: #ededed;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcd14;
+}
