@@ -18,40 +18,44 @@ header {
     background-color: #141414;
     color: #f6f7f8;
     padding: 10px;
-    display: flex; /* Mostrar elementos en línea en el header */
-    align-items: center; /* Centrar verticalmente los elementos del header */
-    position: fixed; /* Hacer que el header esté fijo en la parte superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Set the header to full width */
+    position: fixed; /* Fix the header position */
     top: 0;
     left: 0;
-    right: 0;
-}
-
-.header-left h1 {
+  }
+  
+  .header-left h1 {
     font-size: 24px;
-}
-
-.header-right ul {
+    margin: 0;
+  }
+  
+  .header-right ul {
     list-style: none;
-    display: flex; /* Mostrar los elementos del menú en línea */
-}
-
-.header-right li {
+    display: flex;
+    margin: 0; /* Remove default margin to avoid spacing */
+    padding: 0; /* Remove default padding to avoid spacing */
+  }
+  
+  .header-right li {
     margin-right: 20px;
-}
-
-.header-right li:last-child {
+  }
+  
+  .header-right li:last-child {
     margin-right: 0;
-}
-
-.header-right a {
+  }
+  
+  .header-right a {
     color: #f6f7f8;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.header-right a:hover {
+  }
+  
+  .header-right a:hover {
     color: #ffcd14;
-}
+  }
 
 /* Main Content Styles */
 main {
@@ -102,4 +106,43 @@ footer a {
 
 footer a:hover {
     color: #ffcd14;
+}
+
+/* Image Slider Styles */
+.image-slider {
+    background-color: #141414;
+    padding: 20px;
+    color: #f6f7f8;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-container img {
+    width: 100%;
+    max-height: 300px; /* Ajusta la altura máxima de las imágenes según tus preferencias */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Animación para desplazar las imágenes */
+.slider-container img:not(:first-child) {
+    margin-left: -100%;
+}
+
+/* Agrega animación para que el carrusel se desplace automáticamente */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Configura la velocidad de desplazamiento y la dirección del carrusel */
+.slider-container {
+    animation: slide 5s linear infinite; /* Desplazamiento automático cada 5 segundos */
 }
